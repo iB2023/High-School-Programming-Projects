@@ -1,2 +1,2 @@
-# LinkedIn-Related (Updated October 22, 2022)
+# LinkedIn-Related
 ## My LinkedIn Page: www.linkedin.com/in/ivan-byju
