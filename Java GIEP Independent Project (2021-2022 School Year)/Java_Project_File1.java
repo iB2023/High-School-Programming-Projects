@@ -6,47 +6,48 @@ public class Adventure {
 	{
 		Random randomGenerator = new Random ();
 		// Initialize player name and level
-int playerLevel = 1;
-String playerName = "Ivan";
-double playerHealth = 10.0;	
-Scanner userInput = new Scanner(System.in);
-System.out.println("What is your character's name?");
-playerName = userInput.nextLine();	
-//Scanner userInput = new Scanner(System.in);
-//Print a message asking the player to enter their character's name
-//Use your scanner to read the user's input 
-System.out.println("Welcome " + playerName + "!"); 
-System.out.println("Before you is an enormous cave mouth. Darkness is before you, but adventure awaits. Dare you enter the Cave of Wonders?");
-System.out.println("1. Enter the Cave of Wonders");
-System.out.println("2. Run away to the safety of your warm bed");
-int playerChoice;
-playerChoice = userInput.nextInt();
-if(playerChoice == 1) {
+	int playerLevel = 1;
+	String playerName = "Ivan";
+	double playerHealth = 10.0;	
+	Scanner userInput = new Scanner(System.in);
+	System.out.println("What is your character's name?");
+	playerName = userInput.nextLine();	
+	//Scanner userInput = new Scanner(System.in);
+	//Print a message asking the player to enter their character's name
+	//Use your scanner to read the user's input 
+	System.out.println("Welcome " + playerName + "!"); 
+	System.out.println("Before you is an enormous cave mouth. Darkness is before you, but adventure awaits. Dare you enter the Cave of Wonders?");
+	System.out.println("1. Enter the Cave of Wonders");
+	System.out.println("2. Run away to the safety of your warm bed");
+	int playerChoice;
+	playerChoice = userInput.nextInt();
+		
+	if(playerChoice == 1) {
 	// The player enters the cave
-	System.out.println("You made it to the entrance of the cave.");
-    playerLevel++;
-    System.out.println("Your bravery has rewarded you! Congratulations, you are now level " + playerLevel);
+	    System.out.println("You made it to the entrance of the cave.");
+	    playerLevel++;
+	    System.out.println("Your bravery has rewarded you! Congratulations, you are now level " + playerLevel);
+
+	    // Trap is triggered
+	    System.out.println("You travel forward into the dark cave. You feel something press against your leg...");
+	    System.out.println("It's a trap! Suddenly, you're being bombarded by rocks from above.");
+	    int rockDamage;
+	    rockDamage = randomGenerator.nextInt(5);
+	    playerHealth -= rockDamage;
+	    System.out.println("The rock slide hits you for " + rockDamage + "!");
+	    System.out.println("You have " + playerHealth + " health remaining.");
     
-    // Trap is triggered
-    System.out.println("You travel forward into the dark cave. You feel something press against your leg...");
-    System.out.println("It's a trap! Suddenly, you're being bombarded by rocks from above.");
-    int rockDamage;
-    rockDamage = randomGenerator.nextInt(5);
-    playerHealth -= rockDamage;
-    System.out.println("The rock slide hits you for " + rockDamage + "!");
-    System.out.println("You have " + playerHealth + " health remaining.");
-    
- // The player finds a chest
-    System.out.println("You pick yourself up from the cave floor and brush a cloud of dust from your clothes.");
-    System.out.println("The cave narrows as you press on until you manage to squeeze through a tiny opening into a large natural cavern.");
-    System.out.println("Before you is a glorious treasure chest.");
-     //Declare a boolean to represent if the player has the sword.
-     //Ask your player if they would like to open the chest.
-     //Use your scanner to read the player's choice.
-    boolean hasSword = false;
-    System.out.println("1. Open the chest.");
-    System.out.println("2. Ignore the chest. Obvious trap is obvious.");
-    playerChoice = userInput.nextInt();
+	    //The player finds a chest
+	    System.out.println("You pick yourself up from the cave floor and brush a cloud of dust from your clothes.");
+	    System.out.println("The cave narrows as you press on until you manage to squeeze through a tiny opening into a large natural cavern.");
+	    System.out.println("Before you is a glorious treasure chest.");
+	    //Declare a boolean to represent if the player has the sword.
+	    //Ask your player if they would like to open the chest.
+	    //Use your scanner to read the player's choice.
+	    boolean hasSword = false;
+	    System.out.println("1. Open the chest.");
+	    System.out.println("2. Ignore the chest. Obvious trap is obvious.");
+	    playerChoice = userInput.nextInt();
     
     if(playerChoice == 1){
         System.out.println("Uneasy after your brush with death, you slowly open the chest to reveal a shiny, magical,diamond sword!");
